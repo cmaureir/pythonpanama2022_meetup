@@ -51,8 +51,50 @@
         </div>
       </section>
       <!--***************************************************************************-->
-      <!-- TODO: importancia -->
-      <!-- TODO: hablar de numpy, pandas, tensorflow, pytorch -->
+
+      <section>
+        <h2><i class="red">Diapositivas</i></h2>
+        <h4>https://maureira.xyz/<i class="yellow">pythonpanama2022</i></h4>
+      </section>
+
+      <section data-transition="slide-in fade-out">
+        <h3>¿Por qué es un tema importante? 🤔</h3>
+      </section>
+
+      <section data-transition="slide-in fade-out">
+        <div id="left">
+          <img class="fragment" style="width: 40%;" src="img/numpy.svg" />
+          <img class="fragment" style="width: 80%;" src="img/pandas.svg" />
+        </div>
+        <div id="right">
+          <img class="fragment" style="width: 80%; background-color: white; padding: 10px;" src="img/tensorflow.svg" />
+          <img class="fragment" style="width: 80%; background-color: white; padding: 10px;" src="img/pytorch.svg" />
+        </div>
+      </section>
+
+      <section data-transition="slide-in fade-out">
+        <h3>Numpy y Pandas</h3>
+        <div id="left">
+          <img class="fragment" style="width: 80%;" src="img/languages_numpy.png" />
+        </div>
+        <div id="right">
+          <img class="fragment" style="width: 80%;" src="img/languages_pandas.png" />
+        </div>
+      </section>
+
+      <section data-transition="slide-in fade-out">
+        <h3>Tensorflow y PyTorch</h3>
+        <div id="left">
+          <img class="fragment" style="width: 80%;" src="img/languages_tensorflow.png" />
+        </div>
+        <div id="right">
+          <img class="fragment" style="width: 80%;" src="img/languages_pytorch.png" />
+        </div>
+      </section>
+
+      <section data-transition="slide-in fade-out">
+        <h3>Python <i class="yellow">brilla aún más</i> cuando es con otros lenguajes ✨</h3>
+      </section>
 
       <section data-transition="slide-in fade-out">
         <h3>¿Python?</h3>
@@ -182,7 +224,7 @@
           <span>// Un comentario</span>
           <span>#include &lt;mi_modulo.h&gt;</span>
 
-          <span>float sum(int a, float b) {</span>
+          <span>float suma(int a, float b) {</span>
           <span>    return a + b;</span>
           <span>}</span>
 
@@ -232,16 +274,19 @@
       </section>
 
       <!-- ahora que ya sabemos C, aprendamos C++ -->
+      <section>
+        <h4><i class="green">Aprendamos</i></h4>
+        <h2>un poco de C++</h2>
+        <img style="width: 100px;" src="img/cpp.png"/>
+      </section>
 
       <!-- aprender C++ -->
   <section>
-    <pre style="font-size: 60%;width: 80%;"><code class="python" data-trim data-noescape>
+    <pre style="font-size: 60%;width: 80%;"><code class="python fragment fade-in" data-trim data-noescape>
 if __name__ == "__main__":
     print("Hola Python Panamá")
         </code></pre>
-  </section>
-  <section>
-    <pre style="font-size: 60%;width: 80%;"><code class="c++" data-trim data-noescape>
+    <pre style="font-size: 60%;width: 80%;"><code class="c++ fragment fade-in" data-trim data-noescape>
 #include &lt;iostream&gt;
 
 int main() {
@@ -295,13 +340,13 @@ int main() {
     // o con un iterador...
         </code></pre>
 
-    <pre class="fragment fade-in" data-fragment-index="2" style="font-size: 50%;width: 80%;"><code class="c++" data-trim data-noescape>
+    <pre style="font-size: 50%;width: 80%;"><code class="c++ fragment fade-in" data-fragment-index="2" data-trim data-noescape>
     // obteniendo int de v
     for (int &amp;i : v)
         x += i;
         </code></pre>
 
-    <pre class="fragment fade-in" data-fragment-index="3" style="font-size: 50%;width: 80%;"><code class="c++" data-trim data-noescape>
+    <pre style="font-size: 50%;width: 80%;"><code class="c++ fragment fade-in" data-fragment-index="3" data-trim data-noescape>
     // utilizando inferencia de tipos
     for (auto &amp;i : v)
         x += i;
@@ -321,8 +366,8 @@ int main() {
     std::for_each(begin(v),
                   end(v),
                   [&amp;x](int i) {
-        x += i;
-    });
+                      x += i;
+                  });
         </code></pre>
     <p style="font-size: 50%;">
         <a sytle="font-size: 50%;" href="https://gcc.gnu.org/projects/cxx-status.html#cxx11">https://gcc.gnu.org/projects/cxx-status.html#cxx11</a>
@@ -337,7 +382,7 @@ int main() {
     for (auto i : views::ints(0, 5))
         cout &lt;&lt; i &lt;&lt; endl;
         </code></pre>
-    <pre class="fragment fade-in" data-fragment-index="2" style="font-size: 50%;width: 80%;"><code class="python" data-trim data-noescape>
+    <pre style="font-size: 60%;width: 80%;"><code class="python fragment fade-in" data-fragment-index="2" data-trim data-noescape>
     for i in range(0, 5):
         print(i)
         </code></pre>
@@ -347,13 +392,12 @@ int main() {
   </section>
   <section>
     <h3>C++20 and Python: palindrome</h3>
-    <pre class="fragment fade-in" data-fragment-index="2" style="font-size: 50%;width: 80%;"><code class="c++" data-trim data-noescape>
+    <pre style="font-size: 50%;width: 80%;"><code class="c++ fragment fade-in" data-fragment-index="2"  data-trim data-noescape>
     #include &lt;ranges&gt;
     using namespace std;
 
-    bool is_palindrome(std::string_view word)
-    {
-        return std::ranges::equal(word, views::reverse(word));
+    bool is_palindrome(string_view word) {
+        return ranges::equal(word, views::reverse(word));
     }
         </code></pre>
     <pre style="font-size: 60%;width: 80%;"><code class="python" data-trim data-noescape>
@@ -381,6 +425,33 @@ int main() {
         </div>
       </section>
 
+      <section>
+        <h4>...mejor volvamos al <i class="red">core</i> de Python ⚙️</h4>
+      </section>
+
+  <section>
+    <h3>Python/ceval.c:1504</h3>
+    <pre style="font-size: 38%;width: 80%;"><code class="c++ fragment fade-in" data-fragment-index="2"  data-trim data-noescape>
+    TARGET(BINARY_OP_ADD_INT) {
+        assert(cframe.use_tracing == 0);
+        PyObject *left = SECOND();
+        PyObject *right = TOP();
+        DEOPT_IF(!PyLong_CheckExact(left), BINARY_OP);
+        DEOPT_IF(Py_TYPE(right) != Py_TYPE(left), BINARY_OP);
+        STAT_INC(BINARY_OP, hit);
+        PyObject *sum = _PyLong_Add((PyLongObject *)left, (PyLongObject *)right);
+        SET_SECOND(sum);
+        _Py_DECREF_SPECIALIZED(right, (destructor)PyObject_Free);
+        _Py_DECREF_SPECIALIZED(left, (destructor)PyObject_Free);
+        STACK_SHRINK(1);
+        if (sum == NULL) {
+            goto error;
+        }
+        JUMPBY(INLINE_CACHE_ENTRIES_BINARY_OP);
+        DISPATCH();
+    }
+    </code></pre>
+  </section>
 
 
   <!-- volviendo a la pregunta original -->
@@ -560,12 +631,14 @@ typedef struct _heaptypeobject {
   </section>
 
   <section data-transition="slide-in fade-out">
-    <h3>Creando un módulo simple</h3>
+    <h3>Creando un <i class="yellow">módulo</i> simple 🚀</h3>
+    <h4>En 3 pasos</h4>
   </section>
 
   <!-- Hagamos un módulo -->
   <section data-transition="slide-in fade-out">
-    <pre class="fragment fade-in" data-fragment-index="1"style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+    <h3>simple.c (1/3)</h3>
+    <pre class="fragment fade-in" data-fragment-index="1"style="font-size: 38%;width: 100%;"><code class="c" data-trim data-noescape>
     <span class="fragment" data-fragment-index="1">#include &lt;Python.h&gt;</span>
     <span class="fragment" data-fragment-index="2">static PyObject* simple_hola(PyObject* self, PyObject* args){
     <span class="fragment" data-fragment-index="2">    char *msg = "Hola Panamá";</span>
@@ -589,9 +662,34 @@ typedef struct _heaptypeobject {
     </code></pre>
   </section>
 
-  <!-- TODO pyproject.toml, setup.py -->
-  <!-- TODO: ejecutarlo -->
-  <!-- TODO: documentación -->
+  <section data-transition="slide-in fade-out">
+    <h3><i class="yellow">setup.py</i> (2/3)</h3>
+    <pre class="fragment fade-in" data-fragment-index="1"style="font-size: 50%;width: 100%;"><code class="python fragment" data-trim data-noescape>
+    from setuptools import setup, Extension
+
+    setup(name='simple', version='1.0',
+          ext_modules=[Extension('simple', ['simple.c'])])
+    </code></pre>
+    <h3><i class="yellow">pyproject.toml</i></h3>
+    <pre class="fragment fade-in" data-fragment-index="1"style="font-size: 50%;width: 100%;"><code class="python fragment" data-trim data-noescape>
+    [build-system]
+    requires = ["setuptools"]
+    build-backend = "setuptools.build_meta"
+    </code></pre>
+  </section>
+
+  <section data-transition="slide-in fade-out">
+    <h3><i class="yellow">construir</i> (3/3)</h3>
+    <pre class="fragment fade-in" data-fragment-index="1"style="font-size: 80%;width: 100%;"><code class="bash fragment" data-trim data-noescape>
+    python -m build
+    </code></pre>
+  </section>
+
+  <section data-transition="slide-in fade-out">
+    <h3>Check out the docs!</h3>
+    <img src="img/doc_en.png" />
+  </section>
+
 
   <!-- Documentación en Español -->
 
@@ -612,41 +710,139 @@ typedef struct _heaptypeobject {
         </div>
       </section>
 
+      <section data-transition="slide-in fade-out">
+        <h3>¡Mira la documentación!</h3>
+        <img src="img/doc_es.png" />
+      </section>
+
+      <section>
+        <h3>Un ejemplo más avanzado</h3>
+        <h4><i class="yellow">fastglob</i></h4>
+      </section>
+
+      <section data-transition="slide-in fade-out">
+        <h4>std::filesystem::directory_iterator</h4>
+        <img src="img/doc_fs.png" />
+      </section>
+
+      <section data-transition="slide-in fade-out">
+        <h4>glob</h4>
+        <img src="img/doc_glob.png" />
+      </section>
+
+      <!-- Un ejemplo más avanzado -->
+      <section data-transition="slide-in fade-out">
+        <h3>Benchmark</h3>
+        <pre class="fragment fade-in" data-fragment-index="1"style="font-size: 50%;width: 100%;"><code class="bash" data-trim data-noescape>
+          Directories: 172246
+          Files: 2360091
+
+          # glob
+          Non recursive: 0.01
+          Recursive: 4.04
+
+          # Pathlib.glob
+          Non recursive: 0.41
+          Recursive: 1.52
+
+          # fastglob.glob
+          Non recursive: 0.02
+          Recursive: 0.33
+        </code></pre>
+      </section>
+
+      <section>
+        <h3>¿Tengo que escribirlo <i class="red">todo yo</i>? 😨</h3>
+      </section>
 
   <section>
-    <h3>Un ejemplo más avanzado</h3>
-    <h4>fastglob</h4>
+    <h3>Herramientas más automáticas</h3>
+    <table style="width:100%;font-size: 65%;">
+    <tr>
+      <th></th>
+      <th><i class="blue">Type</i></th>
+      <th><i class="blue">C++</i></th>
+      <th><i class="blue">Python</i></th>
+      <th><i class="blue">License</i></th>
+      <th><i class="blue">Support</i></th>
+    </tr>
+    <tr>
+      <td><i class="yellow">boost::python</i></td>
+      <td>Interface</td>
+      <td>C++11<i class="yellow">+</i></td>
+      <td>2.7, 3.0</td>
+      <td>BSL-1</td>
+      <td>Boost</td>
+    </tr>
+    <tr>
+      <td><i class="yellow">SWIG</i></td>
+      <td>Code gen</td>
+      <td>C++11<i class="yellow">+</i></td>
+      <td>1.5+</td>
+      <td>GPL3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><i class="green">shiboken</i></td>
+      <td>Code gen</td>
+      <td>C++11 (*)</td>
+      <td>2.7, 3.5+</td>
+      <td>LGPLv3</td>
+      <td>Qt</td>
+    </tr>
+    <tr>
+      <td><i class="yellow">sip</i></td>
+      <td>Code gen</td>
+      <td>C++11 (*)</td>
+      <td>3.5+</td>
+      <td>GPLv3</td>
+      <td>Riverbank</td>
+    </tr>
+    <tr>
+      <td><i class="yellow">pyBind11</i></td>
+      <td>Interface</td>
+      <td>C++11 (*)</td>
+      <td>2.7, 3.x</td>
+      <td>BSD-3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><i class="yellow">cffi</i></td>
+      <td>Interface</td>
+      <td>C89, C99 (*)</td>
+      <td>2.6+, 3.0+</td>
+      <td>MIT</td>
+      <td>PyPy</td>
+    </tr>
+    <tr>
+      <td><i class="yellow">cppyy</i></td>
+      <td>Interface</td>
+      <td>C++11<i class="yellow">+</i></td>
+      <td>2 and 3</td>
+      <td>UC</td>
+      <td>-</td>
+    </tr>
+    </table>
   </section>
 
-  <!-- TODO: Mostrar std::filesystem -->
+      <section>
+        <h3>¿y ahora qué? 🐍</h3>
+        <ul>
+          <li class="fragment">Perder <i class="yellow">el miedo</i> a explorar otros lenguajes 👹</li>
+          <li class="fragment">Intentar un ejemplo <i class="green">simple</i> 🏃</li>
+          <li class="fragment">Mirar los generadores automáticos 🤖</li>
+          <li class="fragment">Comenzar el siguiente <i class="red">super módulo</i> en Python 🤩</li>
+        </ul>
+      </section>
 
-  <!-- Un ejemplo más avanzado -->
-  <section data-transition="slide-in fade-out">
-    <pre class="fragment fade-in" data-fragment-index="1"style="font-size: 40%;width: 100%;"><code class="bash" data-trim data-noescape>
-      Directories: 172246
-      Files: 2360091
-
-      glob
-      Non recursive: 0.01
-      Recursive: 4.04
-
-      Pathlib.glob
-      Non recursive: 0.41
-      Recursive: 1.52
-
-      fastglob.glob
-      Non recursive: 0.02
-      Recursive: 0.33
-    </code></pre>
-  </section>
-
-
-
+      <section data-background-image="img/hablemospython.png">
+      </section>
 
       <section>
         <div id="left">
-        <h2 style="font-size: 1.1em;">Aprendiendo sobre el núcleo de Python rompiéndolo todo:</h2>
-        <h3 style="font-size: 1em;"><i class="verde">un tour gentil y en español</i></h3>
+        <h2 style="font-size: 1.2em;">Creando módulos de Python:</h2>
+        <h2 style="font-size: 1.2em;"><i class="ep-red">con C/C++</i></h2>
+        <h3><i class="green">¿Preguntas?</i></h3>
         </div>
         <div id="right">
         <p style="font-size: 80%;margin-top: 10%;">
@@ -690,7 +886,7 @@ typedef struct _heaptypeobject {
     <div id="header">
       <div id="header-left"></div>
       <div id="header-right"><img src="img/pythonpanama.png" width="120px" /></div>
-      <div id="footer-left"><p style="font-size: 22pt;margin-left: 20px;"><i class="yellow">Python Panamá</i> | @cmaureir
+      <div id="footer-left"><p style="font-size: 22pt;margin-left: 20px;"><i class="yellow">Python Panamá</i> | @cmaureir - https://maureira.xyz
     </div>
   </div>
 
